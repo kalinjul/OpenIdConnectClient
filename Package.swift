@@ -2,20 +2,20 @@
 import PackageDescription
 
 let package = Package(
-    name: "oidc-appsupport",
+    name: "OpenIdConnectClient",
     platforms: [
         .iOS(.v15)
     ],
     products: [
         .library(
-            name: "oidc-appsupport",
-            targets: ["oidc-appsupport"]
+            name: "OpenIdConnectClient",
+            targets: ["OpenIdConnectClient"]
         ),
     ],
     targets: [
         .binaryTarget(
-            name: "oidc-appsupport",
-            path: "./oidc-appsupport.xcframework"
+            name: "OpenIdConnectClient",
+            path: "./OpenIdConnectClient.xcframework"
         ),
     ]
 )
