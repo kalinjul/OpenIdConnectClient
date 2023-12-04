@@ -1,21 +1,21 @@
-// swift-tools-version:5.3
+// swift-tools-version:5.6
 import PackageDescription
 
 let package = Package(
-    name: "oidc-appsupport-ios",
+    name: "OpenIdConnectClient",
     platforms: [
         .iOS(.v15)
     ],
     products: [
         .library(
-            name: "oidc-appsupport-ios",
-            targets: ["oidc-appsupport-ios"]
+            name: "OpenIdConnectClient",
+            targets: ["OpenIdConnectClient"]
         ),
     ],
     targets: [
         .binaryTarget(
-            name: "oidc-appsupport-ios",
-            path: "./oidc-appsupport-ios.xcframework"
+            name: "OpenIdConnectClient",
+            path: "./OpenIdConnectClient.xcframework"
         ),
     ]
 )
