@@ -1,6 +1,0 @@
-framework module OpenIdConnectClient {
-    umbrella header "OpenIdConnectClient.h"
-
-    export *
-    module * { export * }
-}
