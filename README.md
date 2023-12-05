@@ -4,6 +4,7 @@
 
 Library for using OpenID Connect in iOS Projects. Build with kotlin multiplatform, published for iOS as Swift Package.
 This project aims to be a lightweight implementation without sophisticated validation on client side.
+This iOS Framework is generated from the [kotlin-multiplatform-oidc](https://github.com/kalinjul/kotlin-multiplatform-oidc) project, where you can find the source code.
 
 - Currently, it only supports the [Authorization Code Grant Flow](https://datatracker.ietf.org/doc/html/rfc6749#section-4.1).
 - Support for [discovery](https://openid.net/specs/openid-connect-discovery-1_0.html) via .well-known/openid-configuration.
@@ -11,20 +12,12 @@ This project aims to be a lightweight implementation without sophisticated valid
 - Simple JWT parsing
 
 # Usage
-## Redirect scheme
-For OpenIDConnect/OAuth to work, you have to add the redirect uri scheme to your Info.plist.
-
-In XCode, go to your Project -> Target -> Info -> URL Types.
-Add your redirect schema (ex. org.publicvalue.multiplatform.oidc.sample)
-
-![Xcode Project Urltypes settings](urltypes.png)
-
 ## Swift package
 Add the swift package from https://github.com/kalinjul/OpenIdConnectClient.
 If you're using a swift module, add this line:
 ```swift
 dependencies: [
-    .package(name: "OpenIdConnectClient", url: "https://github.com/kalinjul/OpenIdConnectClient", exact: "0.3.0")
+    .package(url: "https://github.com/kalinjul/OpenIdConnectClient", exact: "0.3.0")
 ],
 ```
 
@@ -81,7 +74,6 @@ try await client.endSession(idToken: idToken) { requestBuilder in
 
 # JWT Parsing
 We provide simple JWT parsing:
-Swift:
 ```swift
 let jwt = tokens.id_token.map { try! JwtParser.shared.parse(from: $0) }
 print(jwt?.payload.aud) // print audience
