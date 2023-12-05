@@ -15,7 +15,8 @@ let package = Package(
     targets: [
         .binaryTarget(
             name: "OpenIdConnectClient",
-            path: "./OpenIdConnectClient.xcframework"
+            url: "https://github.com/kalinjul/OpenIdConnectClient/raw/develop/OpenIdConnectClient.zip",
+            checksum: "c3c7183d1e9b339a54e5bb0964fdd60572edcc674b59d64bd99dbfcce829f767"
         ),
     ]
 )
