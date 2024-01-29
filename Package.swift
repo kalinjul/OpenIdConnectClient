@@ -16,7 +16,7 @@ let package = Package(
         .binaryTarget(
             name: "OpenIdConnectClient",
             url: "https://github.com/kalinjul/OpenIdConnectClient/raw/develop/OpenIdConnectClient.zip",
-            checksum: "c9209b33d753a6f0939f3dd4e534b0b4c88a237ece77fb3c76aaf460c891d001"
+            checksum: "ffe032faf91fbc4febfd6677f05d4b0db4eeffb0eb8a384e87fc2f02f6c9cf43"
         ),
     ]
 )
